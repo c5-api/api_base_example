@@ -40,4 +40,24 @@ class HelloApiRouteController extends ApiRouteController {
 		$this->respond('This is the `underworld` function!');//you should never see this....
 	}
 
+	/**
+	 * Test public function v2
+	 * @param int $num1
+	 * @param int $num2
+	 * @return void
+	 * @url /hello/add/:num1/:num2
+	 */
+	public function add($num1 = 0, $num2 = 0) { //since this is a public function it can be access directly via the API
+		$this->respond($num1 + $num2);
+	}
+
+	/**
+	 * Test public function v3
+	 * @return void
+	 * @url /hello/params
+	 */
+	public function params($num1 = 0, $num2 = 0) { //since this is a public function it can be access directly via the API
+		$this->respond($_GET['string']);//you can still pull from $_GET and $_POST
+	}
+
 }
