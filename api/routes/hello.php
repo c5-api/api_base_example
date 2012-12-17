@@ -35,6 +35,7 @@ class HelloApiRouteController extends ApiRouteController {
 	/**
 	 * Test private function
 	 * @return void
+	 * Try going to /hell/underworld
 	 */
 	private function underworld() { //since this is a private function it cannot be called directly by the API and can only be called from within this file.
 		$this->respond('This is the `underworld` function!');//you should never see this....
