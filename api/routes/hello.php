@@ -3,7 +3,7 @@
 class HelloApiRouteController extends ApiRouteController {
 
 	/**
-	 * Main function
+	 * Main function and the only required function
 	 * @param string $name
 	 * @return void
 	 * @url /hello/:name
@@ -57,7 +57,7 @@ class HelloApiRouteController extends ApiRouteController {
 	 * @return void
 	 * @url /hello/params
 	 */
-	public function params($num1 = 0, $num2 = 0) { //since this is a public function it can be access directly via the API
+	public function params() { //since this is a public function it can be access directly via the API
 		$this->respond($_GET['string']);//you can still pull from $_GET and $_POST
 	}
 
